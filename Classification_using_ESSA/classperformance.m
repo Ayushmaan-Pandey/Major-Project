@@ -19,6 +19,7 @@ h.ErrorDistribution = zeros(h.NumberOfObservations,1);
 numClasses = numel(CL);
 h.CountingMatrix = zeros(numClasses+1,numClasses);
 h.CorrectRate = numel(GT);
+h.ErrorRate = numel(GT);
 h.SampleDistributionByClass = zeros(numClasses,1);
 h.ErrorDistributionByClass = zeros(numClasses,1);
 h.ListenerEnable = true;
