@@ -18,4 +18,4 @@ end
 
 c = knnclassify(A(vald,x),A(trn,x),A(trn,end),30);
 cp = classperf(A(vald,end),c);
-y = z+(1-p)*(cp.CorrectRate)+p*sum(x)/(length(x)-1);
+y = z+(1-p)*(cp.ErrorRate)+p*sum(x)/(length(x)-1);
