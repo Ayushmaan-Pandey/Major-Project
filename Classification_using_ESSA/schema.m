@@ -57,3 +57,14 @@ if  N ~= 0
 end
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function v = calculateErrorRate(h,w) %#ok
+v = NAN;
+if ~h.ListenerEnable
+return
+end
+CM = h.CountingMatrix(1:end-1,:);
+M = size(CM,1);
+N = sum(sum(CM));
+if  N ~= 0
+    v = sum(sum(CM.*(1-eye(M))))/N;
+end
