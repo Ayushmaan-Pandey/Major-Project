@@ -15,7 +15,7 @@ if sum(x)==0
     y=inf;
     return;
 end
-c = knnclassify(A(vald,x),A(trn,x),A(trn,end),30);
+c = knnclassify(A(vald,x),A(trn,x),A(trn,end),10);
 cp = classperf(A(vald,end),c);
 ac = cp.CorrectRate;
 acc = z+ac;
