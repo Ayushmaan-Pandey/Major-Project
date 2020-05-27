@@ -1,8 +1,8 @@
 function y=Fitness(x)
 %we used this function to calculate the fitness value  
 global A trn vald 
-a = 46;
-b = 50;
+a = 26;
+b = 30;
 r = (b-a).*rand(100,1) + a;
 r_r = [min(r)];
 z = r_r;
@@ -16,6 +16,6 @@ if sum(x)==0
     return;
 end
 
-c = knnclassify(A(vald,x),A(trn,x),A(trn,end),30);
+c = knnclassify(A(vald,x),A(trn,x),A(trn,end),10);
 cp = classperf(A(vald,end),c);
-y = z+(1-p)*(cp.ErrorRate)+p*sum(x)/(length(x)-1);
+y = (1-p)*(cp.ErrorRate)+p*sum(x)/(length(x)-1)-z;
