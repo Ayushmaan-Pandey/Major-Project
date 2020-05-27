@@ -1,5 +1,6 @@
 # Major-Project
 Improving Classification Accuracy Using Enhanced Salp Swarm Algorithm
+
 In this project we have studied and compared SSA with other bio-inspired optimisation algorithms and then we have improved basic SSA to enhance solution accuracy , reliability and convergence speed.In the Enhanced SSA we made some changes in c1 parameter. We replaced the original equation with a more converging exponential equation to make SSA converge faster. We used both unimodal and multimodal test functions to test and compare ESSA and SSA. We then used SSA and K- nearest neighbour (KNN) classifier for feature selection in which several datasets were utilised to assess and compare the performance of ESSA. We found that ESSA produced superior results to all other Algorithms in majority of cases.
 
 SSA - It a recently introduced Bio-inspired algorithm that is based on the swarming mevchanism of salps.
